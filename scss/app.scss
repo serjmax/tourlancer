@@ -1,0 +1,896 @@
+@import "settings";
+// @import "foundation";
+@import "foundation/components/global";
+
+// Or selectively include components
+@import "foundation/components/accordion";
+@import "foundation/components/alert-boxes";
+@import "foundation/components/block-grid";
+@import "foundation/components/breadcrumbs";
+@import "foundation/components/button-groups";
+@import "foundation/components/buttons";
+@import "foundation/components/clearing";
+@import "foundation/components/dropdown";
+@import "foundation/components/dropdown-buttons";
+@import "foundation/components/flex-video";
+@import "foundation/components/forms";
+@import "foundation/components/grid";
+@import "foundation/components/inline-lists";
+@import "foundation/components/joyride";
+@import "foundation/components/keystrokes";
+@import "foundation/components/labels";
+@import "foundation/components/magellan";
+@import "foundation/components/orbit";
+@import "foundation/components/pagination";
+@import "foundation/components/panels";
+@import "foundation/components/pricing-tables";
+@import "foundation/components/progress-bars";
+@import "foundation/components/reveal";
+@import "foundation/components/side-nav";
+@import "foundation/components/split-buttons";
+@import "foundation/components/sub-nav";
+@import "foundation/components/switches";
+@import "foundation/components/tables";
+@import "foundation/components/tabs";
+@import "foundation/components/thumbs";
+@import "foundation/components/tooltips";
+@import "foundation/components/top-bar";
+@import "foundation/components/type";
+@import "foundation/components/offcanvas";
+@import "foundation/components/visibility";
+
+
+$topbar-bg-color: #fff;
+$header-font-color: #00B5AD;
+$header-font-weight: bold;
+$h2-font-size: 5rem;
+$blue-color: #40B5E4;
+$red-color: #FF2649;
+$pink-color: #D4145A;
+$grey-color: #e7e7e7;
+$teel-color: #00B5AD;
+$green-color: #5BBD72;
+$white-color: #fff;
+$background-color: $grey-color;
+
+// colors styles class
+
+.red{
+  color: $red-color;
+}
+
+// global styles
+
+.row-full-height{
+	height: 100%;
+}
+
+.row-table{
+	display: table;
+	table-layout: fixed;
+}
+
+.content{
+  max-width: 100%;
+}
+
+.vertical-align{
+	vertical-align: middle;
+	float: none;
+	display: table-cell;
+}
+
+.top-bar{
+	border-bottom: solid 1px $grey-color;
+}
+
+.top-bar_welcome{
+	background: none !important;
+	border: none;
+	z-index: 10;
+}
+
+footer{
+  max-width: 100%;
+  background: #333;
+  color: #fff;
+}
+
+.space-vertical{
+  margin-top: 20px !important;
+}
+
+.middle-columns{
+	vertical-align: middle;
+	float: none;
+	display: table-cell;
+}
+
+.row-condensed>.columns{
+	padding-left: 6px;
+	padding-right: 6px;
+}
+
+.button.active{
+  background-color: #cccccc !important;
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: normal;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08) inset !important;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+  margin-bottom: 4px;
+}
+
+
+// welcome page
+
+.top-bar__how-it-works{
+  background: none !important;
+}
+
+.top-bar_welcome .name h1 a{
+	color: #fff !important;
+}
+
+.login{
+  background: $teel-color !important;
+}
+
+.signup{
+  background: $red-color !important;
+}
+
+.login a,
+.signup a{
+  color: #fff !important;
+}
+
+.top-bar-section a:not(.button){
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button){
+  background: none !important;
+}
+
+.top-bar .name h1 a{
+  color: $header-font-color;
+  font-weight: $header-font-weight;
+}
+
+
+.hero-background{
+  background: url(../img/hero-NY_medium.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  position: relative;
+  top: -45px;
+}
+
+.hero{
+  padding-top: 150px;
+}
+
+.hero h2{
+  font-size: $h2-font-size;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+
+.hero p{
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding-bottom: 100px;
+}
+
+.how-it-works{
+  color: #333 !important;
+  background-color: #fff !important;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.hero_search{
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.50);
+}
+
+.hero_search input{
+	margin: 0;
+}
+
+.discovery-card-panel{
+	padding: 0;
+	// border: none;
+}
+
+.discovery-card-wrapper{
+	height: 344px;
+	position: relative;
+	// border: solid 1px $grey-color;
+}
+
+.darken-on-hover-container{
+	background: #000;
+	padding: 0;
+}
+
+.darken-on-hover-container:hover .darken-on-hover {
+	opacity: 0.85;
+}
+
+.discovery-card{
+	
+	background-color: #f5f5f5;
+	background-size: cover;
+	background-position: center;
+}
+
+.discovery-card-title{
+	color: $white-color !important;
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+.media-cover, .media-cover-dark:after {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: absolute;
+}
+
+.select-country{
+  padding-top: 60px;
+}
+
+.select-country__title{
+  line-height: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.select-country li{
+  margin-left: 8px !important;
+}
+
+.select-country a{
+  margin-bottom: 8px;
+  padding: 9px 14px;
+}
+
+.about-1{
+  background: url(../img/about-1.jpg);
+  background-position: center top;
+  background-repeat: repeat-x;
+  margin-top: 40px;
+}
+
+.about-2{
+  background: url(../img/about-2.jpg);
+  background-position: center top;
+  background-repeat: repeat-x;
+  margin-top: 40px;
+}
+
+.about-text{
+  padding-top: 400px;
+  padding-bottom: 40px;
+}
+
+.about-text h2{
+  font-weight: 900;
+}
+
+.entire-category-tooltip{
+	// top: 22px;
+	// position: relative;
+}
+
+.icon{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	transition: none !important;
+	background-size: 200%
+}
+
+.art-icon{
+	background-image: url(../img/art-icon.svg);
+}
+
+.art-icon:hover{
+	background-image: url(../img/art-icon.svg);
+	background-position: 100% 0px;
+	transition: none !important;
+}
+
+.adventure-icon{
+	background-image: url(../img/adventure-icon.svg);
+}
+
+.adventure-icon:hover{
+	background-image: url(../img/adventure-icon.svg);
+	background-position: 100% 0px;
+	transition: none !important;
+}
+
+.romantic-icon{
+	background-image: url(../img/romantic-icon.svg);
+}
+
+.romantic-icon:hover{
+	background-image: url(../img/romantic-icon.svg);
+	background-position: 100% 0px;
+	transition: none !important;
+}
+
+.culture-icon{
+	background-image: url(../img/culture-icon.svg);
+}
+
+.culture-icon:hover{
+	background-image: url(../img/culture-icon.svg);
+	background-position: 100% 0px;
+	transition: none !important;
+}
+
+
+// search page
+
+.map{
+	position: fixed;
+	top: 45px;
+	left: 0;
+	bottom: 0;
+	width: 40%;
+}
+
+.map:before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	right: 0;
+	-webkit-box-shadow: inset -1px 0 1px rgba(0,0,0,0.3);
+	box-shadow: inset -1px 0 1px rgba(0,0,0,0.3);
+	width: 2px;
+	z-index: 2;
+}
+
+.sidebar{
+	position: fixed;
+	top: 45px;
+	right: 0;
+	bottom: 0;
+	width: 60%;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	background: $white-color;
+	padding-top: 20px;
+}
+
+.country-map{
+  top: 45px;
+  height: 500px;
+  width: 100%;
+  z-index: -1000;
+  overflow: hidden;
+}
+
+#map-canvas{
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.filter-list__title{
+  font-weight: 400;
+	text-transform: capitalize;
+	// line-height: 5.2rem;
+	font-size: 0.9rem;
+}
+
+.filter_checkbox{
+	top: 2px;
+	position: relative;
+}
+
+#about{
+  padding: 40px 0;
+}
+
+#filter{
+  border-left: solid 1px #cccccc;
+  padding: 40px 0;
+}
+
+.filter_tags{
+	li{
+		list-style: none;
+	}
+}
+
+.filter_tags-category{
+	font-size: 0.9rem;
+	color: $sub-nav-font-color;
+}
+
+#result{
+  background: $background-color;
+  // border: solid 1px #cccccc;
+  height: 100%;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+
+
+// tour page
+
+.tour-hero{
+	background: url(../img/morocco-hero.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 600px;
+}
+
+.tour-hero__review{
+	width: 250px;
+	height: 400px;
+	position: absolute;
+	right: 15px;
+	top: 60px;
+}
+
+.tour-review__rating{
+	background: rgba(250, 250, 250, 0.9);
+	padding: 10px;
+}
+
+.tour-review__comment{
+	background: rgba(250, 250, 250, 0.9);
+	margin-top: 15px;
+	padding: 10px;
+	font-size: 0.8rem;
+}
+
+.tour-review__user{
+	background: white;
+	padding: 10px;
+	font-size: 0.8rem;
+
+	img{
+		width: 35px;
+		height: 35px;
+		border-radius: 35px;
+		margin-right: 5px;
+	}
+}
+
+.tour-review__rating_left{
+	background: url(../img/smiles-sprite-x2.png) -39px 77px;
+	height: 39px;
+	width: 39px;
+	display: inline-block;
+	top: 4px;
+	position: relative;
+}
+
+.tour-review__rating_right{
+	display: inline-block;
+	float: right;
+
+	.bold{
+		font-weight: 700;
+		color: $blue-color;
+		font-size: 1.8rem;
+		font-weight: 700;
+		color: #40B5E4;
+		/* display: inline-block; */
+		float: left;
+		height: 30px;
+		line-height: 0.8em;
+	}
+
+	.small{
+		font-weight: 700;
+		color: $blue-color;
+		line-height: 2em;
+		height: 23px;
+	}
+}
+
+.tour-review__rating_right_description{
+	font-size: 0.8rem;
+}
+
+.tour_header{
+	height: 150px;
+	margin-top: 20px;
+}
+
+.tour_header_details{
+	margin-left: 170px;
+}
+
+.tour_header_avatar{
+	float: left;
+	border-radius: 1000px;
+	height: 150px;
+	width: 150px;
+	overflow: hidden;
+}
+
+.tour_header_avatar img{
+	max-width: 180px;
+}
+
+.tour_header_details_name h2{
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.tour_details li{
+	list-style: none;
+}
+
+[data-magellan-expedition], [data-magellan-expedition-clone] {
+	border-bottom: solid 1px #CCC;
+	z-index: 10000000 !important;
+  }
+
+.tour_booking{
+	margin-top: 20px;
+
+	input{
+		border: none;
+		background: none;
+		box-shadow: none;
+		margin-top: 25px;
+	}
+}
+
+.tour_booking_price{
+	font-size: 4.2rem;
+	font-weight: 100;
+	text-align: center;
+}
+
+.tour_booking_people{
+	text-align: center;
+	font-size: 0.9rem;
+	color: $jet;
+}
+
+.tour_booking_date{
+	position: absolute;
+	top: 197px;
+	font-size: 0.9rem;
+	color: $form-label-font-color;
+}
+
+
+
+/* result preview*/
+
+.tour{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  // padding-bottom: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.tour__title{
+  margin: 10px;
+}
+
+.tour__photo{
+  height: 200px;
+  overflow: hidden;
+}
+
+.tour__photo img{
+	height: 110%;
+	max-width: none;
+}
+
+.tour__name{
+  position: relative;
+  height: 42px;
+  // width: 180px;
+  text-transform: uppercase;
+  // border-right: solid 1px $grey-color;
+}
+
+.tour__wishlist{
+	background: url(../img/heart-icon.svg) -1px 0px;
+	height: 30px;
+	width: 32px;
+	position: absolute;
+	margin: 10px;
+	transition: none !important;
+
+	.active{
+		background: url(../img/heart-icon.svg) -66px 0px;
+		height: 30px;
+		width: 32px;
+		position: absolute;
+		margin: 10px;
+	}
+}
+
+.tour__wishlist:focus,
+.tour__wishlist:hover,
+{
+	background: url(../img/heart-icon.svg) -33px 0px;
+	height: 30px;
+	width: 32px;
+	position: absolute;
+	margin: 10px;
+	transition: none;
+}
+
+
+
+// .aligner{
+//   display: -webkit-box;
+//   display: -webkit-flex;
+//   display: -moz-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -webkit-box-align: center;
+//   -webkit-align-items: center;
+//   -moz-box-align: center;
+//   -ms-flex-align: center;
+//   align-items: center;
+//   -webkit-box-pack: center;
+//   -webkit-justify-content: center;
+//   -moz-box-pack: center;
+//   -ms-flex-pack: center;
+//   justify-content: center;
+//   height: 72px;
+// }
+
+.tour__price{
+  position: relative;
+  // width: 100px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: $pink-color;
+}
+
+.tour__rating{
+  display: inline-block;
+  padding-top: 16px;
+}
+
+.tour__icon{
+  float: left;
+  background: url(../img/smiles-sprite.png)135px 54px;
+  height: 27px;
+  width: 27px;
+  // margin-left: 10px;
+}
+
+.tour__point{
+  color: $green-color;
+  font-weight: bold;
+  font-size: 1.6rem;
+  float: left;
+  margin-left: 10px;
+  line-height: 1.5rem;
+}
+
+.tour__sum{
+  text-transform: uppercase;
+  float: left;
+  font-size: 0.8rem;
+  color: adjust-color($grey-color,$lightness:-20%);
+  margin-left: 10px;
+  line-height: 1.4rem;
+}
+
+.tour__guide{
+  // margin-left: 10px;
+}
+
+.tour__description{
+  // margin-left: 10px;
+}
+
+.tour__description p{
+    font-size: 0.8rem;
+}
+
+.tour__tags{
+  // margin-left: 10px;
+}
+
+// Calendar
+
+.gldp-flatwhite {
+	position: absolute;
+	font-family: 'helvetica';
+}
+
+/* Core style for every cell */
+.gldp-flatwhite .core {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	float: left;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	text-align: center;
+	cursor: pointer;
+	color: #222;
+	background: #ffffff;
+}
+
+/* Cell border */
+.gldp-flatwhite .border {
+	border-style: solid;
+	border-width: 0;
+	border-color: #fff;
+}
+
+/* Month/Year text and select */
+.gldp-flatwhite .monyear,
+.gldp-flatwhite .monyear select {
+	font-size: 16px !important;
+	font-weight: bold;
+	background: #eee;
+}
+
+/* Month/Year text */
+.gldp-flatwhite .monyear span {
+	margin: 0 5px 0 5px;
+}
+
+/* Prev/Next arrows */
+.gldp-flatwhite .prev-arrow,
+.gldp-flatwhite .next-arrow {
+	color: #666;
+	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.gldp-flatwhite .prev-arrow:active,
+.gldp-flatwhite .next-arrow:active {
+	color: #000;
+}
+
+.gldp-flatwhite .prev-arrow-off,
+.gldp-flatwhite .next-arrow-off {
+	color: #000;
+	opacity: 0.15;
+}
+
+/* Days of the week */
+.gldp-flatwhite .dow {
+	color: #222;
+	font-weight: bold;
+	cursor: wait !important;
+	background: #eee;
+}
+
+/* Weekdays */
+.gldp-flatwhite .mon,
+.gldp-flatwhite .tue,
+.gldp-flatwhite .wed,
+.gldp-flatwhite .thu,
+.gldp-flatwhite .fri {
+	font-weight: bold;
+}
+
+/* Weekend days */
+.gldp-flatwhite .sat,
+.gldp-flatwhite .sun {
+	color: #888;
+	font-weight: bold;
+}
+
+/* Selectable days that are outside of current month being shown */
+.gldp-flatwhite .outday {
+	color: #aaa !important;
+}
+
+/* Hover */
+.gldp-flatwhite .mon:hover,
+.gldp-flatwhite .tue:hover,
+.gldp-flatwhite .wed:hover,
+.gldp-flatwhite .thu:hover,
+.gldp-flatwhite .fri:hover,
+.gldp-flatwhite .sat:hover,
+.gldp-flatwhite .sun:hover {
+	background: #eee;
+}
+
+/* Non-Selectable days */
+.gldp-flatwhite .noday {
+	color: #bbb;
+	font-weight: normal;
+	cursor: wait !important;
+	background: #ddd;
+}
+
+/* Currently selected day */
+.gldp-flatwhite .selected {
+	color: #fff;
+	font-weight: bold;
+	border-color: #888;
+	background: #aaa;
+}
+
+/* Today */
+.gldp-flatwhite .today {
+	color: #fff;
+	font-weight: bold;
+	border-color: #000;
+	background: #222;
+}
+
+/* Special */
+.gldp-flatwhite .special {
+	color: #fff;
+	font-weight: bold;
+	border-color: #444;
+	background: #666;
+}
+
+
+// User page
+
+.user_header{
+	margin-top: 20px;
+}
+
+.user_header_avatar{
+	float: left;
+	border-radius: 1000px;
+	height: 150px;
+	width: 150px;
+	overflow: hidden;
+}
+
+.user_header_avatar img{
+	max-width: 180px;
+}
+
+.commit-block{
+	margin-top: 20px !important;
+}
+
+.commit_avatar{
+	float: left;
+	border-radius: 100px;
+	height: 100px;
+	width: 100px;
+	overflow: hidden;
+}
+
+.commit_avatar img{
+	max-width: 120px;
+}
+
+.commit{
+	p{
+		font-size: 0.8rem;
+	}
+}
+
+.commit_user{
+	font-weight: 700;
+	font-size: 0.8rem
+}

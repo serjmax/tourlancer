@@ -1,0 +1,327 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourlancer | Forms</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/forms.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <form class="basic-form">
+        <div class="row">
+            <div class="large-12 columns title-block">
+                <h3>THE BASICS</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns form-block">
+
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">Title *</p>
+                    </div>
+                    <div class="large-6 columns end">
+                        <input type="text" id="title-input" placeholder="Example: 'Paella on the Playa'">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">Location *</p>
+                    </div>
+                    <div class="large-6 columns end">
+                        <input type="text" id="location-input" placeholder="Example: 123 Hipster Avenue, Brooklyn, NY 11249.">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">Summary *</p>
+                    </div>
+                    <div class="large-6 columns end">
+                        <textarea id="summary-input"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">People *</p>
+                    </div>
+                    <div class="large-1 columns">
+                        <input type="text" id="min-input">
+                    </div>
+                    <div class="large-1 columns">
+                        <label for="right-label" class="left inline">Min</label>
+                    </div>
+                    <div class="large-1 columns">
+                        <input type="text" id="max-input" class="inline">
+                    </div>
+                    <div class="large-1 columns end">
+                        <label for="right-label" class="left inline">Max</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">Duration *</p>
+                    </div>
+                    <div class="large-1 columns">
+                        <input type="text" id="duration-input" type="number">
+                    </div>
+                    <div class="large-2 columns end">
+                        <select class="typeduration-input">
+                            <option value="minutes">Minutes</option>
+                            <option value="hours">Hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">Price *</p>
+                    </div>
+                    <div class="large-3 columns">
+                        <div class="row collapse">
+                            <div class="small-3 columns">
+                                <span class="prefix">$ US</span>
+                            </div>
+                            <div class="small-9 columns end">
+                                <input type="text" id="price-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="large-3 columns end">
+                        <input type="radio" name="pricetype" value="perperson" id="pperson-input">
+                        <label for="pperson-input">Per Person</label>
+                        <input type="radio" name="pricetype" value="flatrate" id="flarate-input">
+                        <label for="flarate-input">Flat Rate</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">Category</p>
+                    </div>
+                    <div class="large-3 columns end">
+                        <select class="category-input">
+                            <option value="adventure">Adventure</option>
+                            <option value="after_dark">After dark</option>
+                            <option value="art">Art</option>
+                            <option value="culture">Culture</option>
+                            <option value="family">Family</option>
+                            <option value="food_wine">Food & Wine</option>
+                            <option value="Romance">Romance</option>
+                            <option value="sleeping">Sleeping</option>
+                        </select>
+                    </div>
+                </div>
+
+                </label>
+                <div class="row">
+                    <div class="large-4 columns">
+                        <p class="text-right">Private Notes</p>
+                    </div>
+                    <div class="large-6 columns end">
+                        <textarea id="notes-input"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="center">
+                            <a href="#" class="button center save-button [secondary alert radius round]">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form>
+        <div class="row">
+            <div class="large-12 columns title-block">
+                <h3>PHOTOS</h3>
+                <P>Now make your listing beautiful!</P>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns form-block">
+                <div class="row">
+                    <div class="large-4 columns">
+                        <a href="#" class="button [secondary alert radius round]">+ Add photo</a>
+                    </div>
+                    <div class="large-8 columns">
+                        <ul class="disc">
+                            <li>Add up to 10 high quality photos of your experience. The bigger the better but not more than 2MB each.</li>
+                            <li>The first photo is your cover photo. To make a different photo, hover over it and select <b>Cover</b>. Having a large cover photo will make your experience stand out!</li>
+                            <li>To re-order your other photos, click and drag the icon in the top left part of the photo.</li>
+                            <li>Request free professional photography.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form>
+        <div class="row">
+            <div class="large-12 columns title-block">
+                <h3>VIDEO</h3>
+                <p>Videos are worth a million words. Make your experience stand out by adding a link to a YouTube or Vimeo video.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns form-block">
+                <div class="row">
+                    <div class="large-10 columns">
+                        <input type="text" id="video-input" placeholder="Link to video (YouTube or Vimeo)(Optional)">
+                    </div>
+
+                    <div class="large-2 columns">
+                        <a href="#" class="button save-basic-button[secondary alert radius round]">Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </form>
+    <form>
+        <div class="row">
+            <div class="large-12 columns title-block">
+                <h3>BECOME AN INSIDER</h3>
+                <p>Share what do you like with the world.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns form-block">
+                <div class="row">
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Name</p>
+                        </div>
+                        <div class="large-4 columns end">
+                            <input type="text" id="name-input">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Mail</p>
+                        </div>
+                        <div class="large-4 columns end">
+                            <input type="text" id="mail-input">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Contact number</p>
+                        </div>
+                        <div class="large-4 columns end">
+                            <input type="text" id="cnumber-input">
+                            <a href="#" class="button [radius round]">Verify now</a>
+                            <p>To get texts for notifications we need to verify your contact number. It only takes a minute.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Profile Video</p>
+                        </div>
+                        <div class="large-8 columns end">
+                            <p>To ensure trust, safety, and a high level of quality each Insider is asked to create a profile video to tell your potential travelers a little more about your experience. Keep it simple! Let us know:</p>
+                            <ul>
+                                <li>Who you are</li>
+                                <li>About your experience(s)</li>
+                                <li>What makes you a (fun!) local expert</li>
+                            </ul>
+                            <p>Record a New Video</p>
+                            <p>Or link to a video</p>
+                            <input type="text" id="linkvideo-input" placeholder="Link to a video">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Biography</p>
+                        </div>
+                        <div class="large-8 columns end">
+                            <textarea id="biography-input"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Languages</p>
+                        </div>
+                        <div class="large-4 columns end">
+                            <input type="text" id="languages-input" placeholder="Optional">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Time Zone</p>
+                        </div>
+                        <div class="large-6 columns end">
+                            <select class="timezone-input">
+                                <option value="zone-8">(GMT-08:00) Pacific Time (US & Canada)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns">
+                            <p class="text-right">Notifications</p>
+                        </div>
+                        <div class="large-6 columns end">
+                            <div class="row">
+                                <input id="check-news" type="checkbox">
+                                <label for="check-news">Suscribe to newsletter</label>
+                            </div>
+                            <div class="row">
+                                <input id="check-sms" type="checkbox">
+                                <label for="check-sms">Send SMS alerts</label>
+                            </div>
+                            <p>Scroll up the top to verify your phone number for SMS alerts.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="center">
+                            <a href="#" class="button center save-insider-button [secondary alert radius round]">Save</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <form>
+        <div class="row">
+            <div class="large-12 columns">
+                <h3>SECURE BANK TRANSFER</h3>
+                <div class="large-12 columns">
+                    <a href="#" class="button [secondary success alert radius round]">ADD BANK TRANSFER</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <form>
+        <div class="row">
+            <div class="large-12 columns">
+                <h3>PAYPAL</h3>
+                <p>Vayable releases payouts via Paypal ONCE A WEEK. Time until funds arrive to your bank account after Vayable releases them:</p>
+                <ul>
+                    <li>Within the US:
+                        < 1 business day (+ transfer time to your bank)</li>
+                            <li>Outiside the US:
+                                < 1 business day (+ transfer time to your bank)</li>
+                </ul>
+                <p>PayPal charges a withdrawal fee. Please keep in mind that funds cannot be deposited on bank holidays, so may add delays.</p>
+                <a href="#" class="button [secondary success alert radius round]">ADD PAYPAL</a>
+            </div>
+        </div>
+    </form>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/forms.js"></script>
+    <script>
+    $(document).foundation();
+    </script>
+</body>
+
+</html>

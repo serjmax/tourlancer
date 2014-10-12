@@ -1,0 +1,292 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourlancer | Search</title>
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link href="stylesheets/jquery-ui.css" rel="stylesheet">
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $(function() {
+        $( "#slider-range" ).slider({
+          range: true,
+          min: 0,
+          max: 1000,
+          values: [ 75, 300 ],
+          slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+          }
+        });
+        $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+          " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+      });
+    </script>
+  </head>
+
+  <body>
+    <nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="welcome.html">TOURLANCER</a></h1>
+        </li>
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="active login"><a href="#" data-reveal-id="subscribe">log in</a></li>
+          <li class="active signup"><a href="#" data-reveal-id="subscribe">sign up</a></li>
+        </ul>
+        <ul class="left">
+          <li class="has-form">
+            <div class="row collapse">
+              <div class="large-8 small-9 columns">
+                <input type="text" placeholder="Find Stuff">
+              </div>
+              <div class="large-4 small-3 columns">
+                <a href="#" class="alert button expand">Search</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
+    <div class="sidebar">
+      <div class="row">
+        <div class="small-12 columns">
+          <div class="row">
+            <div class="large-2 columns">
+              <div class="filter-list__title">city</div>
+            </div>
+            <div class="large-10 columns middle-columns">
+              <div class="row row-condensed">
+                <div class="small-3 columns">
+                  <input id="NewYork" type="checkbox" class="filter_checkbox"><label for="NewYork">New York</label>
+                </div>
+                <div class="small-3 columns">
+                  <input id="Miami" type="checkbox" class="filter_checkbox"><label for="Miami">Miami</label>
+                </div>
+                <div class="small-3 columns">
+                  <input id="LosAngeles" type="checkbox" class="filter_checkbox"><label for="LosAngeles">Los Angeles</label>
+                </div>
+                <div class="small-3 columns">
+                  <input id="LosVegas" type="checkbox" class="filter_checkbox"><label for="LosVegas">Los Vegas</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+
+          <div class="row">
+            <div class="large-2 columns">
+              <div class="filter-list__title" style="line-height: 5.2rem;">category</div>
+            </div>
+            <div class="large-10 columns middle-columns">
+              <div class="row">
+                <div class="small-3 columns">
+                  <label class="row row-table entire-category-tooltip row-condensed" for="checkbox1">
+                    <div class="small-2 columns middle-columns">
+                      <input id="checkbox1" type="checkbox">
+                    </div>
+                    <div class="small-10 columns middle-columns text-center">
+                      <div class="icon art-icon"></div>
+                      <div>Art</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="small-3 columns">
+                  <label class="row row-table entire-category-tooltip row-condensed" for="checkbox2">
+                    <div class="small-2 columns middle-columns">
+                      <input id="checkbox2" type="checkbox">
+                    </div>
+                    <div class="small-10 columns middle-columns text-center">
+                      <div class="icon adventure-icon"></div>
+                      <div>Adventure</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="small-3 columns">
+                  <label class="row row-table entire-category-tooltip row-condensed" for="checkbox3">
+                    <div class="small-2 columns middle-columns">
+                      <input id="checkbox3" type="checkbox">
+                    </div>
+                    <div class="small-10 columns middle-columns text-center">
+                      <div class="icon romantic-icon"></div>
+                      <div>Romantic</div>
+                    </div>
+                  </label>
+                </div>
+                <div class="small-3 columns">
+                  <label class="row row-table entire-category-tooltip row-condensed" for="checkbox4">
+                    <div class="small-2 columns middle-columns">
+                      <input id="checkbox4" type="checkbox">
+                    </div>
+                    <div class="small-10 columns middle-columns text-center">
+                      <div class="icon culture-icon"></div>
+                      <div>Culture</div>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row space-vertical">
+            <div class="large-2 columns">
+              <div class="filter-list__title">price</div>
+            </div>
+            <div class="large-10 columns">
+              <div class="row">
+                <div class="small-12 columns">
+                  <p>
+                    <label for="amount">Price range:</label>
+                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                  </p>
+                   
+                  <div id="slider-range"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row space-vertical">
+            <div class="large-2 columns">
+              <div class="filter-list__title red">tags</div>
+            </div>
+            <div class="large-10 columns">
+              <div class="row">
+                <div class="small-12 columns">
+                  <div class="button tiny secondary">
+                    mountains
+                  </div>
+                  <div class="button tiny secondary">
+                    sahara
+                  </div>
+                  <div class="button tiny secondary">
+                    watterfall
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section row" id="result">
+            <div class="large-12 columns">
+              <h3>83 activities found in Morocco</h3>
+            </div>
+
+            <div class="large-12 columns">
+              <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+                <li>
+                  <div class="tour">
+                    <div class="tour__wishlist active"></div>
+                    <a href="tour.html">
+                      <div class="tour__photo">
+                        <img src="img/morocco-hero_small.jpg" alt="">
+                      </div>
+                    </a>
+                    <div class="tour__title">
+                      <div class="tour__name">
+                        <a href="tour.html">Day trip from Marrakech to the Atlas mountains</a>
+                      </div>
+                      <div class="tour__price right">$157</div>
+                      <div class="tour__rating">
+                        <div class="tour__icon"></div>
+                        <div class="tour__point">9.4</div>
+                        <div class="tour__sum">29 review</div>
+                      </div>
+                      <div class="tour__guide">
+                        <a href="user.html">with Alexander K.</a>
+                      </div>
+                      <div class="tour__description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus in cum neque culpa dolores nam doloremque.</p>
+                      </div>
+                      <div class="tour__tags">
+                        <span class="label">4WD</span>
+                        <span class="label">mountains</span>
+                        <span class="label">sahara</span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="tour">
+                    <div class="tour__wishlist active"></div>
+                    <div class="tour__photo">
+                      <img src="img/Istanbul Rooftops.jpg" alt="">
+                    </div>
+                    <div class="tour__title">
+                      <div class="tour__name">
+                        <a href="tour.html">Istanbul Rooftops</a>
+                      </div>
+                      <div class="tour__price right">$100</div>
+                      <div class="tour__rating">
+                        <div class="tour__icon"></div>
+                        <div class="tour__point">9.4</div>
+                        <div class="tour__sum">29 review</div>
+                      </div>
+                      <div class="tour__guide">
+                        <a href="user.html">with Jesus Bergua</a>
+                      </div>
+                      <div class="tour__description">
+                        <p>City on the Seven Hills, Istanbul is one of the most iconic places in earth, cultures meeting point during centuries, gate between Asia and Europe and a 14 million citizens megapolis.
+                        </p>
+                      </div>
+                      <div class="tour__tags">
+  
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="map">
+      <div id="map-canvas"></div>
+    </div>
+      
+
+    <!-- SUBSCRIBE MODAL WINDOW -->
+    <div id="subscribe" class="reveal-modal" data-reveal>
+      <h2>Awesome. I have it.</h2>
+      <p class="lead">Your couch.  It is mine.</p>
+      <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+  
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+      var map;
+      function initialize() {
+        var mapOptions = {
+          zoom: 4,
+          center: new google.maps.LatLng(40.7038997,-94.5389457,5),
+          disableDefaultUI: true,
+        };
+        map = new google.maps.Map(document.getElementById('map-canvas'),
+            mapOptions);
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </body>
+</html>
